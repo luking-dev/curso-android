@@ -10,8 +10,9 @@ Si tenes otra arquitectura de procesador o el instalador anterior no funciona, p
 
 ## Procesadores AMD
 Para aquellos que cuenten con un procesador AMD, deberan:
-1. Activar el modo SVM en la BIOS. [Como lo hago?](https://concamilo.com/solucion-android-emulator-hypervisor-driver-for-amd-processors-installation-failed/)
-2. Instalar el Driver del Emulador de Android. [Como lo hago?](https://github.com/google/android-emulator-hypervisor-driver-for-amd-processors/releases/download/v1.7/gvm-windows_v1_7_0.zip)
+1. Corroborar que Hyper-V este deshabilitado. [Como lo hago?](https://translate.google.com/translate?sl=en&tl=es&u=https://github.com/google/android-emulator-hypervisor-driver-for-amd-processors/wiki/Is-Hyper-V-really-disabled%253F)
+2. Activar el modo SVM en la BIOS. [Como lo hago?](https://concamilo.com/solucion-android-emulator-hypervisor-driver-for-amd-processors-installation-failed/)
+3. Instalar el [Driver del Emulador de Android](https://github.com/google/android-emulator-hypervisor-driver-for-amd-processors/releases/download/v1.7/gvm-windows_v1_7_0.zip). [Como lo hago?](https://translate.google.com/translate?hl=&sl=en&tl=es&u=https%3A%2F%2Fgithub.com%2Fgoogle%2Fandroid-emulator-hypervisor-driver-for-amd-processors%2Fblob%2Fmaster%2FREADME.md)
 
 ## Primeros pasos
 Iniciar Android Studio.

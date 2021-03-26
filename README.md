@@ -18,4 +18,4 @@ Iniciar Android Studio.
 
 Crear un nuevo proyecto. Para ello:
 
-File > New > New Project > Empty Activity > En el campo Name dar un nombre a la aplicacion > Finnish
+_File > New > New Project > Empty Activity > En el campo Name dar un nombre a la aplicacion > Finnish_

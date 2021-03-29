@@ -1,6 +1,6 @@
 # Curso Android
 
-## Clases
+## Clases grabadas
 | Nro de clase | Enlace |
 | ------------ | ------ |
 | Clase 1 | https://youtu.be/7LvlhdG66zI |
@@ -15,6 +15,9 @@ Si tenes otra arquitectura de procesador o el instalador anterior no funciona, p
 
 ## Prerequisitos
 Instalar [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html#license-lightbox).
+
+## Procesadores Intel
+Puede que se necesite configurar el [acelerador de graficos](https://developer.android.com/studio/run/emulator-acceleration?hl=es-419#avd-gpu).
 
 ## Procesadores AMD
 Para aquellos que cuenten con un procesador AMD, deberan:

@@ -5,6 +5,7 @@
 | ------------ | ------ |
 | Clase 1 | https://youtu.be/7LvlhdG66zI |
 | Clase 2 | https://youtu.be/V-8_7Vxbil4 |
+| Clase 3 | https://youtu.be/-QfXOjKQiBI |
 
 ## Instalacion
 

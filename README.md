@@ -37,3 +37,6 @@ Crear un nuevo proyecto. Para ello:
 ```sh
 File > New > New Project > Empty Activity > En el campo Name dar un nombre a la aplicacion > Finnish
 ```
+
+## Encriptando contraseñas
+[Aqui](https://www.samclarke.com/kotlin-hash-strings/) hay una breve explicacion.

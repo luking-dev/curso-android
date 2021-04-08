@@ -53,7 +53,7 @@ Gradle Scripts > build.gradle > dependencies
 
 Dentro del objeto dependencies, escribir la linea siguiente:
 
-```sh
+```kotlin
 dependencies {
     ...
     implementation 'com.loopj.android:android-async-http:1.4.9'

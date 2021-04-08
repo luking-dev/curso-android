@@ -54,8 +54,15 @@ Gradle Scripts > build.gradle > dependencies
 Dentro del objeto dependencies, escribir la linea siguiente:
 
 ```sh
-implementation 'import com.loopj.android.http.*;'
+dependencies {
+    ...
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    ...
+}
 ```
 
-##  
-[](https://loopj.com/android-async-http/)
+## Android Async Http
+Servicio para realizar [peticiones http asincronicas](https://loopj.com/android-async-http/).
+
+## API Rest
+Servicio para ejemplos de API Rest: https://reqres.in/

@@ -42,16 +42,20 @@ File > New > New Project > Empty Activity > En el campo Name dar un nombre a la 
 ## Encriptar contraseñas
 [Aqui](https://www.samclarke.com/kotlin-hash-strings/) hay una breve explicacion.
 
-## Objetos JSON
-Se puede mejorar su lectura con [esta](https://codebeautify.org/jsonviewer) herramienta.
+## API Rest
+Servicio Web para ejemplos de API Rest: https://reqres.in/
+
+## Android Asynchronous Http Client
+Herramienta para realizar [peticiones http asincronicas](https://loopj.com/android-async-http/) para consumir servicios web.
 
 ## Dependencias externas
-Importarlas a:
+Para instalar herramientas de terceros como la mencionada arriba, primero se la debe importar:
+
 ```sh
 Gradle Scripts > build.gradle > dependencies
 ```
 
-Dentro del objeto dependencies, escribir la linea siguiente:
+Luego, dentro del objeto dependencies, escribir la siguiente linea:
 
 ```kotlin
 dependencies {
@@ -61,8 +65,5 @@ dependencies {
 }
 ```
 
-## Android Asynchronous Http Client
-Servicio para realizar [peticiones http asincronicas](https://loopj.com/android-async-http/).
-
-## API Rest
-Servicio para ejemplos de API Rest: https://reqres.in/
+## Objetos JSON
+Los servicios web por lo general devuelven respuestas en formato JSON. Se puede mejorar la lectura de dichos objetos con [esta](https://codebeautify.org/jsonviewer) herramienta.

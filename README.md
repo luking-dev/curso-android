@@ -44,3 +44,18 @@ File > New > New Project > Empty Activity > En el campo Name dar un nombre a la 
 
 ## Objetos JSON
 Se puede mejorar su lectura con [esta](https://codebeautify.org/jsonviewer) herramienta.
+
+## Dependencias externas
+Importarlas a:
+```sh
+Gradle Scripts > build.gradle > dependencies
+```
+
+Dentro del objeto dependencies, escribir la linea siguiente:
+
+```sh
+implementation 'import com.loopj.android.http.*;'
+```
+
+##  
+[](https://loopj.com/android-async-http/)

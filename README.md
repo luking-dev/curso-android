@@ -41,3 +41,6 @@ File > New > New Project > Empty Activity > En el campo Name dar un nombre a la 
 
 ## Encriptar contraseñas
 [Aqui](https://www.samclarke.com/kotlin-hash-strings/) hay una breve explicacion.
+
+## Objetos JSON
+Se puede mejorar su lectura, con [esta](https://codebeautify.org/jsonviewer) herramienta.

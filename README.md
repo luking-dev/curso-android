@@ -61,7 +61,7 @@ dependencies {
 }
 ```
 
-## Android Async Http
+## Android Asynchronous Http Client
 Servicio para realizar [peticiones http asincronicas](https://loopj.com/android-async-http/).
 
 ## API Rest

@@ -82,3 +82,6 @@ Los servicios web por lo general devuelven respuestas en formato JSON. Se puede 
 
 ## Libreria para manejo de imagenes
 [Documentacion](https://square.github.io/picasso/) de la herramienta.
+
+## Lenguaje SQL
+[Referencia](https://www.w3schools.com/sql) del lenguaje SQL.

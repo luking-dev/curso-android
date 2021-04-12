@@ -46,13 +46,13 @@ File > New > New Project > Empty Activity > En el campo Name dar un nombre a la 
 ## Gestionar permisos
 Agregar los permisos requeridos dentro de la estructura:
 
-´´´sh
+```sh
 app > manifests > AndroidManifest.xml
-´´´
+```
 
-´´´kotlin
+```kotlin
 <uses-permission android:name="android.permission.INTERNET" />
-´´´
+```
 
 ## API Rest
 Servicio Web para ejemplos de API Rest: https://reqres.in/

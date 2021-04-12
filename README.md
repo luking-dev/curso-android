@@ -64,7 +64,7 @@ Herramienta para realizar [peticiones http asincronicas](https://loopj.com/andro
 Para instalar herramientas de terceros como la mencionada arriba, primero se la debe importar:
 
 ```sh
-Gradle Scripts > build.gradle > dependencies
+Gradle Scripts > build.gradle (Module) > dependencies
 ```
 
 Luego, dentro del objeto dependencies, escribir la siguiente linea:

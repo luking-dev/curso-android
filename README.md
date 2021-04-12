@@ -79,3 +79,6 @@ dependencies {
 
 ## Objetos JSON
 Los servicios web por lo general devuelven respuestas en formato JSON. Se puede mejorar la lectura de dichos objetos con [esta](https://codebeautify.org/jsonviewer) herramienta.
+
+## Libreria para manejo de imagenes
+[Documentacion](https://square.github.io/picasso/) de la herramienta.

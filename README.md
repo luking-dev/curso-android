@@ -40,6 +40,12 @@ Crear un nuevo proyecto. Para ello:
 File > New > New Project > Empty Activity > En el campo Name dar un nombre a la aplicacion > Finnish
 ```
 
+Crear una unidad virtual. Para ello, dirigirse al menu:
+
+```sh
+Tools > AVD Manager > Create Virtual Device > Phone > Nexus 5X
+```
+
 ## Encriptar contraseñas
 [Aqui](https://www.samclarke.com/kotlin-hash-strings/) hay una breve explicacion.
 

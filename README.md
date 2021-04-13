@@ -1,9 +1,9 @@
 # Curso Android
 
 ## Clases grabadas
-| Nro de clase | Enlace |
-| ------------ | ------ |
-| Clase 1 | https://youtu.be/7LvlhdG66zI |
+| # de clase | Enlace | # de clase | Enlace |
+| ---------- | ------ | ---------- | ------ |
+| Clase 1 | https://youtu.be/7LvlhdG66zI | Clase 6 | https://youtu.be/A2dZuJSjYq4 |
 | Clase 2 | https://youtu.be/V-8_7Vxbil4 |
 | Clase 3 | https://youtu.be/-QfXOjKQiBI |
 | Clase 4 | https://youtu.be/4QjwnAFuQrI |

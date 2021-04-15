@@ -91,3 +91,6 @@ Los servicios web por lo general devuelven respuestas en formato JSON. Se puede 
 
 ## Lenguaje SQL
 [Referencia](https://www.w3schools.com/sql) del lenguaje SQL.
+
+## Visor de Bases de Datos SQLite
+Se puede utilizar [esta](https://sqlitebrowser.org/dl/) herramienta para ver el contenido de Bases de Datos SQLite.

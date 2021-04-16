@@ -16,7 +16,7 @@
 
 Si tenes otra arquitectura de procesador o el instalador anterior no funciona, probablemente tengas que descargar la version x86 desde [aca](https://redirector.gvt1.com/edgedl/android/studio/ide-zips/3.6.3.0/android-studio-ide-192.6392135-windows32.zip).
 
-## Prerequisitos
+## Pre-requisitos
 Instalar [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html#license-lightbox).
 
 ## Procesadores Intel

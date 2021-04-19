@@ -83,6 +83,11 @@ dependencies {
 }
 ```
 
+## Evitar cacheo de App
+Es conveniente eliminar los datos de cache de la aplicacion para no arrastrar errores al momento de modificar codigo y que los cambios se vean reflejados en la compilacion de testeo.
+
+Antes de implementar ```super.OnDestroy()```, invocar al metodo ```clearApplicationData()```.
+
 ## Objetos JSON
 Los servicios web por lo general devuelven respuestas en formato JSON. Se puede mejorar la lectura de dichos objetos con [esta](https://codebeautify.org/jsonviewer) herramienta.
 

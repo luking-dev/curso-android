@@ -83,7 +83,7 @@ dependencies {
 }
 ```
 
-## Evitar cacheo de App (* no testeado *)
+## Evitar cacheo de App (***no testeado***)
 Es conveniente eliminar los datos de cache de la aplicacion para no arrastrar errores al momento de modificar codigo y que los cambios se vean reflejados en la compilacion de testeo.
 
 La manera mas sencilla de realizar esto con menor intervencion de codigo es utilizando [Apache Commons IO](https://commons.apache.org/proper/commons-io/) o alguna otra API que realice esto mismo en su lugar.
@@ -99,7 +99,7 @@ import org.apache.commons.io.FileUtils;
 FileUtils.deleteQuietly(context.getCacheDir());
 ```
 
-Nota: Si lo utiliza, tambien se debe eliminar el directorio devuelto por ```context.getExternalCacheDir()```.
+_Nota: Si lo utiliza, tambien se debe eliminar el directorio devuelto por ```context.getExternalCacheDir()```._
 
 Para poder usar Apache Commons IO, recordar agregar lo siguiente al archivo ```build.gradle``` que hace referencia al modulo, en la parte de dependencias:
 

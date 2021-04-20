@@ -83,10 +83,31 @@ dependencies {
 }
 ```
 
-## Evitar cacheo de App
+## Evitar cacheo de App (* no testeado *)
 Es conveniente eliminar los datos de cache de la aplicacion para no arrastrar errores al momento de modificar codigo y que los cambios se vean reflejados en la compilacion de testeo.
 
-Antes de implementar ```super.OnDestroy()```, invocar al metodo ```clearApplicationData()```.
+La manera mas sencilla de realizar esto con menor intervencion de codigo es utilizando [Apache Commons IO](https://commons.apache.org/proper/commons-io/) o alguna otra API que realice esto mismo en su lugar.
+
+Importar la utilidad que acabamos de mencionar, y llamar al metodo ```deleteQuietly()```, pasando ```context.getCacheDir()``` como parametro:
+
+```kotlin
+import org.apache.commons.io.FileUtils;
+
+...
+
+// Eliminar el directorio local de cache (ignorando cualquier error)
+FileUtils.deleteQuietly(context.getCacheDir());
+```
+
+Nota: Si lo utiliza, tambien se debe eliminar el directorio devuelto por ```context.getExternalCacheDir()```.
+
+Para poder usar Apache Commons IO, recordar agregar lo siguiente al archivo ```build.gradle``` que hace referencia al modulo, en la parte de dependencias:
+
+```kotlin
+compile 'commons-io:commons-io:2.4'
+```
+
+Referencia tomada de https://stackoverflow.com/a/43092909
 
 ## Objetos JSON
 Los servicios web por lo general devuelven respuestas en formato JSON. Se puede mejorar la lectura de dichos objetos con [esta](https://codebeautify.org/jsonviewer) herramienta.

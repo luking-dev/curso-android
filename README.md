@@ -63,6 +63,9 @@ app > manifests > AndroidManifest.xml
 ## API Rest
 Servicio Web para ejemplos de API Rest: https://reqres.in/
 
+## Documentacion de Android
+Toda las referencias al momento del desarrollo se puede encontrar en la [pagina oficial](https://developer.android.com/) de Android Studio.
+
 ## Android Asynchronous Http Client
 Herramienta para realizar [peticiones http asincronicas](https://loopj.com/android-async-http/) para consumir servicios web.
 

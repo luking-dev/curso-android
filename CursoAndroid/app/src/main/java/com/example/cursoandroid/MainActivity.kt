@@ -11,6 +11,7 @@ import android.widget.Toast
 import java.security.MessageDigest
 
 class MainActivity : AppCompatActivity() {
+    // TODO: Borrar SuppressLint
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,10 +25,11 @@ class MainActivity : AppCompatActivity() {
         val clave = findViewById<EditText>(R.id.usuarioClave)
         val btnIngresar = findViewById<Button>(R.id.botonIngresar)
         val btnRegistro = findViewById<Button>(R.id.botonRegistro)
+        val btnUsuarios = findViewById<Button>(R.id.botonUsuarios)
         /*val resultado = findViewById<TextView>(R.id.textoResultado)*/
 
         btnIngresar.setOnClickListener {
-            val claveHash = HashUtils.sha1(clave.text.toString().trim())
+            val claveHash = Utilidades.HashUtils.sha1(clave.text.toString().trim())
 
             if (email.text.isNullOrEmpty() || clave.text.isNullOrEmpty()) {
                 Toast.makeText(this@MainActivity, "Por favor complete los campos", Toast.LENGTH_LONG).show()
@@ -41,12 +43,16 @@ class MainActivity : AppCompatActivity() {
             }
 
             var datosUsuario = "Email: " + email.text.toString() + " Clave: " + clave.text.toString()
-            datosUsuario = HashUtils.sha1(clave.text.toString())
+            datosUsuario = Utilidades.HashUtils.sha1(clave.text.toString())
             /*resultado.text = datosUsuario*/
         }
 
         btnRegistro.setOnClickListener {
             abrirActividadRegistro()
+        }
+
+        btnUsuarios.setOnClickListener {
+            abrirActividadUsuarios()
         }
     }
 
@@ -64,25 +70,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentRegistro)
     }
 
-    object HashUtils {
-        fun sha256(input: String) = hashString("SHA-256", input)
-
-        fun sha1(input: String) = hashString("SHA-1", input)
-
-        private fun hashString(type: String, input: String): String {
-            val HEX_CHARS = "0123456789ABCDEF"
-            val bytes = MessageDigest
-                    .getInstance(type)
-                    .digest(input.toByteArray())
-            val result = StringBuilder(bytes.size * 2)
-
-            bytes.forEach {
-                val i = it.toInt()
-                result.append(HEX_CHARS[i shr 4 and 0x0f])
-                result.append(HEX_CHARS[i and 0x0f])
-            }
-
-            return result.toString()
-        }
+    fun abrirActividadUsuarios() {
+        val intentUsuarios:Intent = Intent(this@MainActivity, UsuariosActivity::class.java)
+        startActivity(intentUsuarios)
     }
+
 }

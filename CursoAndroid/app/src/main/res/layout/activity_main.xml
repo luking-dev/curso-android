@@ -50,17 +50,28 @@
         android:backgroundTint="#4caf50"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:text="Ingresar" />
 
     <Button
         android:id="@+id/botonRegistro"
         android:text="Nuevo usuario"
         android:backgroundTint="#2196F3"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp" />
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/botonUsuarios"
+        android:text="Usuarios SQLite"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <!--<TextView
         android:id="@+id/textoResultado"

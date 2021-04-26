@@ -17,13 +17,13 @@ class BaseDeDatos (context: Context) :SQLiteOpenHelper(context, NOMBRE_BD, null,
     override fun onCreate(db: SQLiteDatabase) {
 
         // creo tabla usuarios con 3 columnas
-        db.execSQL("create table usuarios(id integer primary key autoincrement, nombre text, email text)")
+        db.execSQL("create table usuarios(id integer primary key autoincrement, nombre text, email text, clave text, avatar text)")
 
         // agrego 2 registros/rows/filas iniciales
-        val consultaSQL = "insert into usuarios (nombre, email)" +
+        val consultaSQL = "insert into usuarios (nombre, email, clave, avatar)" +
                 " values " +
-                "('Juan Perez', 'juan@empresa.com'), " +
-                "('Maria Fernandez', 'maria@gmail.com')"
+                "('Juan Perez', 'juan@empresa.com', '7C4A8D09CA3762AF61E59520943DC26494F8941B', 'https://2.bp.blogspot.com/-bD9iB6eEFNc/WXdfMahDf-I/AAAAAAAAEX0/Jr2V9cPvrJITSZkTmwt2k1PBZ_m830A5wCLcBGAs/s1600/image1.png'), " +
+                "('Maria Fernandez', 'maria@gmail.com', '7C4A8D09CA3762AF61E59520943DC26494F8941B', 'https://2.bp.blogspot.com/-bD9iB6eEFNc/WXdfMahDf-I/AAAAAAAAEX0/Jr2V9cPvrJITSZkTmwt2k1PBZ_m830A5wCLcBGAs/s1600/image1.png')"
         db.execSQL(consultaSQL)
     }
 

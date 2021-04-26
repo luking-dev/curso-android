@@ -14,23 +14,29 @@
         android:layout_height="wrap_content" />
 
     <EditText
+        android:id="@+id/nombreCompleto"
         android:hint="Nombre completo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:id="@+id/email"
         android:hint="Email"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:id="@+id/clave"
+        android:inputType="numberPassword"
         android:hint="Clave"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:id="@+id/repetirClave"
+        android:inputType="numberPassword"
         android:hint="Repetir clave"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
@@ -55,6 +61,7 @@
         android:layout_height="150dp" />
 
     <Button
+        android:id="@+id/botonRegistro"
         android:text="Registrarme"
         android:backgroundTint="@color/azul_marino"
         android:layout_width="match_parent"

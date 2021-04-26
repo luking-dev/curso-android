@@ -63,7 +63,7 @@ class UsuariosActivity : AppCompatActivity() {
                 listaUsuarios.add(
                                 filas.getString(0) +
                         " - " + filas.getString(1) +
-                        " - " + filas.getString(2)
+                        " - " + filas.getString(3)
                 )
             }
             while (filas.moveToNext())

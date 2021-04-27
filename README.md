@@ -47,7 +47,10 @@ Tools > AVD Manager > Create Virtual Device > Phone > Nexus 5X
 ```
 
 ## Encriptar contraseñas
-[Aqui](https://www.samclarke.com/kotlin-hash-strings/) hay una breve explicacion.
+[Aqui](https://www.samclarke.com/kotlin-hash-strings/) encontraremos el algoritmo que usaremos en nuestro IDE de programacion.
+
+## Generador de hash SHA-1
+Podemos encriptar una cadena de caracteres utilizando el algoritmo SHA-1 con ayuda de [esta](https://passwordsgenerator.net/sha1-hash-generator/) herramienta online.
 
 ## Gestionar permisos
 Agregar los permisos requeridos dentro de la estructura:

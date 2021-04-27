@@ -7,7 +7,7 @@
 | Clase 2 | https://youtu.be/V-8_7Vxbil4 | Clase 7 | https://youtu.be/qWSvusqXTY8 |
 | Clase 3 | https://youtu.be/-QfXOjKQiBI | Clase 8 | https://youtu.be/PJmwsgZbCuM |
 | Clase 4 | https://youtu.be/4QjwnAFuQrI | Clase 9 | https://youtu.be/m-Zg7VheyI4 |
-| Clase 5 | https://youtu.be/CfXRE5R2Im0 |
+| Clase 5 | https://youtu.be/CfXRE5R2Im0 | Clase 10 | https://youtu.be/Bqp-36ettrI |
 
 ## Instalacion
 

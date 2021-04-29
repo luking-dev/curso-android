@@ -33,7 +33,6 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:layout_margin="15dp"
-        android:text="juan@empresa.com"
         android:hint="Correo electrónico" />
 
     <EditText
@@ -42,7 +41,6 @@
         android:layout_height="wrap_content"
         android:inputType="numberPassword"
         android:layout_margin="15dp"
-        android:text="123456"
         android:hint="Clave" />
 
     <Button

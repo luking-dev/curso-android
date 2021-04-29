@@ -2,24 +2,37 @@ package com.example.cursoandroid
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import java.security.MessageDigest
 
 class MainActivity : AppCompatActivity() {
     // TODO: Borrar SuppressLint
+    @RequiresApi(Build.VERSION_CODES.P)
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val bundle: Bundle? = intent.extras
+
+        if (bundle != null) {
+            val notificacion = bundle.getString("registro_notificacion") ?: ""
+
+            if (notificacion.length > 5) {
+                Utilidades.notificacion(this, notificacion)
+            }
+        }
+
         // usuario registrado de fantasia
-        val emailURegistrado = "juan@empresa.com"
-        val claveURegistrado = "7C4A8D09CA3762AF61E59520943DC26494F8941B"
+        //val emailURegistrado = "juan@empresa.com"
+        //val claveURegistrado = "7C4A8D09CA3762AF61E59520943DC26494F8941B"
 
         val email = findViewById<EditText>(R.id.usuarioEmail)
         val clave = findViewById<EditText>(R.id.usuarioClave)
@@ -32,19 +45,18 @@ class MainActivity : AppCompatActivity() {
             val claveHash = Utilidades.HashUtils.sha1(clave.text.toString().trim())
 
             if (email.text.isNullOrEmpty() || clave.text.isNullOrEmpty()) {
-                Toast.makeText(this@MainActivity, "Por favor complete los campos", Toast.LENGTH_LONG).show()
+                Utilidades.notificacion(this@MainActivity, "Por favor complete los campos")
             }
-            else if (email.text.toString().trim() == emailURegistrado && claveHash == claveURegistrado) {
-                /*Toast.makeText(this@MainActivity, "Login exitoso!", Toast.LENGTH_LONG).show()*/
+            else if (comprobarCredenciales(email.text.toString().trim(), claveHash)) {
                 abrirActividadInicio(email.text.toString(), clave.text.toString())
             }
             else {
-                Toast.makeText(this@MainActivity, "La cuenta no existe", Toast.LENGTH_LONG).show()
+                Utilidades.notificacion(this@MainActivity, "La cuenta no existe")
             }
 
             var datosUsuario = "Email: " + email.text.toString() + " Clave: " + clave.text.toString()
-            datosUsuario = Utilidades.HashUtils.sha1(clave.text.toString())
-            /*resultado.text = datosUsuario*/
+            //datosUsuario = Utilidades.HashUtils.sha1(clave.text.toString())
+            //resultado.text = datosUsuario
         }
 
         btnRegistro.setOnClickListener {
@@ -73,6 +85,21 @@ class MainActivity : AppCompatActivity() {
     fun abrirActividadUsuarios() {
         val intentUsuarios:Intent = Intent(this@MainActivity, UsuariosActivity::class.java)
         startActivity(intentUsuarios)
+    }
+
+    // retorna un booleano dependiendo si el usuario existe en la tabla o no
+    @RequiresApi(Build.VERSION_CODES.P)
+    fun comprobarCredenciales(email: String, clave: String): Boolean {
+        // base de datos
+        val usuarios = BaseDeDatos(this)
+        val db = usuarios.writableDatabase
+
+        // consulta sqlite
+        val consultaUsuario = "SELECT * FROM usuarios WHERE email=${email} AND clave=${clave}"
+        val resultado = db.rawQuery(consultaUsuario, null)
+
+        // comprobar resultado
+        return resultado.moveToFirst()
     }
 
 }

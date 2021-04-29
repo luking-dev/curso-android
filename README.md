@@ -135,3 +135,6 @@ Build > Build Bundle(s) / APK(s) > Build APK
 ```
 
 [Aqui](https://developer.android.com/guide/app-bundle?utm_source=android-studio), una explicacion de la diferencia entre APKs y Bundles.
+
+## Herramienta para crear APIs
+Podemos hacerlo a traves de [esta](https://www.mockapi.io/) pagina web.

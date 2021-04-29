@@ -126,3 +126,12 @@ Los servicios web por lo general devuelven respuestas en formato JSON. Se puede 
 
 ## Visor de Bases de Datos SQLite
 Se puede utilizar [esta](https://sqlitebrowser.org/dl/) herramienta para ver el contenido de Bases de Datos SQLite.
+
+## Generacion del archivo APK de la aplicacion
+Para generar el archivo final para distribuir la aplicacion, debemos dirigirnos al menu:
+
+```sh
+Build > Build Bundle(s) / APK(s) > Build APK
+```
+
+[Aqui](https://developer.android.com/guide/app-bundle?utm_source=android-studio), una explicacion de la diferencia entre APKs y Bundles.

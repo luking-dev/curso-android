@@ -8,7 +8,6 @@
 | Clase 3 | https://youtu.be/-QfXOjKQiBI | Clase 8 | https://youtu.be/PJmwsgZbCuM |
 | Clase 4 | https://youtu.be/4QjwnAFuQrI | Clase 9 | https://youtu.be/m-Zg7VheyI4 |
 | Clase 5 | https://youtu.be/CfXRE5R2Im0 | Clase 10 | https://youtu.be/Bqp-36ettrI |
-| Lista de reproduccion | https://youtube.com/playlist?list=PLLTLjTrlms4n1zxiSYZ30GmZFm_A5jsE2 |
 
 ## Instalacion
 

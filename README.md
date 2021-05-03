@@ -141,3 +141,39 @@ Build > Build Bundle(s) / APK(s) > Build APK
 
 ## Herramienta para crear APIs
 Podemos hacerlo a traves de [esta](https://www.mockapi.io/) pagina web.
+
+## Implementar RecyclerView
+Dirigirse a la seccion Gradle del modulo del proyecto
+
+```sh
+Gradle Scripts > build.gradle (Module) > dependencies
+```
+
+Agregar ```id 'kotlin-kapt'``` al objeto plugins:
+
+```kotlin
+    ...
+    id 'kotlin-kapt
+    ...
+```
+
+Luego, debajo del objeto dependencies, escribir la siguiente linea:
+
+```kotlin
+buildFeatures {
+    dataBinding true
+}
+```
+
+Y finalmente, implementar la dependencia:
+
+
+```kotlin
+dependencies {
+    ...
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    ...
+}
+```
+
+

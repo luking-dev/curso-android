@@ -3,11 +3,14 @@
 ## Clases grabadas
 | # de clase | Enlace | # de clase | Enlace |
 | ---------- | ------ | ---------- | ------ |
-| Clase 1 | https://youtu.be/7LvlhdG66zI | Clase 6 | https://youtu.be/A2dZuJSjYq4 | Clase 11 | https://youtu.be/VacofUQ_VD0 |
-| Clase 2 | https://youtu.be/V-8_7Vxbil4 | Clase 7 | https://youtu.be/qWSvusqXTY8 |
-| Clase 3 | https://youtu.be/-QfXOjKQiBI | Clase 8 | https://youtu.be/PJmwsgZbCuM |
-| Clase 4 | https://youtu.be/4QjwnAFuQrI | Clase 9 | https://youtu.be/m-Zg7VheyI4 |
-| Clase 5 | https://youtu.be/CfXRE5R2Im0 | Clase 10 | https://youtu.be/Bqp-36ettrI |
+| Clase 1 | https://youtu.be/7LvlhdG66zI | Clase 9  | https://youtu.be/m-Zg7VheyI4 |
+| Clase 2 | https://youtu.be/V-8_7Vxbil4 | Clase 10 | https://youtu.be/Bqp-36ettrI |
+| Clase 3 | https://youtu.be/-QfXOjKQiBI | Clase 11 | https://youtu.be/VacofUQ_VD0 |
+| Clase 4 | https://youtu.be/4QjwnAFuQrI | 
+| Clase 5 | https://youtu.be/CfXRE5R2Im0 | 
+| Clase 6 | https://youtu.be/A2dZuJSjYq4 | 
+| Clase 7 | https://youtu.be/qWSvusqXTY8 |
+| Clase 8 | https://youtu.be/PJmwsgZbCuM |
 
 ## Instalacion
 

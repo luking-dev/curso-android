@@ -152,9 +152,11 @@ Gradle Scripts > build.gradle (Module) > dependencies
 Agregar ```id 'kotlin-kapt'``` al objeto plugins:
 
 ```kotlin
+plugins {
     ...
     id 'kotlin-kapt
     ...
+}
 ```
 
 Luego, debajo del objeto dependencies, escribir la siguiente linea:

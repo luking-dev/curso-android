@@ -49,6 +49,9 @@ Crear una unidad virtual. Para ello, dirigirse al menu:
 Tools > AVD Manager > Create Virtual Device > Phone > Nexus 5X
 ```
 
+## Importar clases
+Posicionar el cursor sobre la clase que se necesita importar, y presionar la combinacion de teclas [ALT] + [ENTER].
+
 ## Encriptar contraseñas
 [Aqui](https://www.samclarke.com/kotlin-hash-strings/) encontraremos el algoritmo que usaremos en nuestro IDE de programacion.
 

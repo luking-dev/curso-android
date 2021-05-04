@@ -50,7 +50,7 @@ Tools > AVD Manager > Create Virtual Device > Phone > Nexus 5X
 ```
 
 ## Importar clases
-Posicionar el cursor sobre la clase que se necesita importar, y presionar la combinacion de teclas [ALT] + [ENTER].
+Posicionar el cursor sobre la clase que se necesita importar, y presionar la combinacion de teclas <kbd>Alt</kbd> + <kbd>Enter</kbd>.
 
 ## Encriptar contraseñas
 [Aqui](https://www.samclarke.com/kotlin-hash-strings/) encontraremos el algoritmo que usaremos en nuestro IDE de programacion.

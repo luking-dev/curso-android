@@ -12,6 +12,8 @@
 | Clase 7 | https://youtu.be/qWSvusqXTY8 |
 | Clase 8 | https://youtu.be/PJmwsgZbCuM |
 
+> Lista de reproduccion: https://youtube.com/playlist?list=PLLTLjTrlms4n1zxiSYZ30GmZFm_A5jsE2
+
 ## Instalacion
 
 * [IntelliJ IDEA (Community)](https://www.jetbrains.com/es-es/idea/download/) (elegir Community, del lado derecho de la pagina web).

@@ -83,6 +83,9 @@ Herramienta para realizar [peticiones http asincronicas](https://loopj.com/andro
 ## Otro cliente http mas potente
 [Retrofit](https://square.github.io/retrofit/) es otra herramienta, mucho mas potente que la anterior.
 
+# Serializador
+Para trabajar o serializar la respuesta del cliente http, usaremos [Gson](https://github.com/google/gson).
+
 ## Dependencias externas
 Para instalar herramientas de terceros como la mencionada arriba, primero se la debe importar:
 

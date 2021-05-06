@@ -28,7 +28,12 @@ class AnuncioAdapter:ListAdapter<Anuncio,AnuncioAdapter.AnuncioViewHolder>(DiffC
     }
 
     override fun onBindViewHolder(holder: AnuncioAdapter.AnuncioViewHolder, position: Int) {
+        // obtenemos la posicion del anuncio
+        val anuncio: Anuncio = getItem(position)
 
+        // reemplazamos los valores
+        holder.titulo.text = anuncio.titulo
+        holder.precio.text = "$ " + anuncio.precio.toString()
     }
 
     // clase interna

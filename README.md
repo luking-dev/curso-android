@@ -80,6 +80,9 @@ Toda las referencias al momento del desarrollo se puede encontrar en la [pagina 
 ## Android Asynchronous Http Client
 Herramienta para realizar [peticiones http asincronicas](https://loopj.com/android-async-http/) para consumir servicios web.
 
+## Otro cliente http mas potente
+[Retrofit](https://square.github.io/retrofit/) es otra herramienta, mucho mas potente que la anterior.
+
 ## Dependencias externas
 Para instalar herramientas de terceros como la mencionada arriba, primero se la debe importar:
 

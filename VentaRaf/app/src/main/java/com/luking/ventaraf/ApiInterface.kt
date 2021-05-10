@@ -4,11 +4,16 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface ApiInterface {
     // obtiene lista de anuncios desde mi api
     @GET("anuncios")
-    fun getAnuncios(): Call<List<Anuncio>>
+    fun getAnuncios(): Call<List<AnuncioResumen>>
+
+    // obtiene un anuncio completo
+    @GET("anuncios/{id}")
+    fun getAnuncio(@Path("id") id: Int): Call<Anuncio>
 
     companion object {
         // llamar a la api de mockapi

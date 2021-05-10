@@ -26,6 +26,7 @@
             android:id="@+id/anuncioTitulo"
             android:text="Titulo Anuncio 1 Titulo Anuncio 1"
             android:textSize="20dp"
+            android:minWidth="175dp"
             android:maxWidth="175dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

@@ -191,4 +191,5 @@ dependencies {
 }
 ```
 
-
+## Realizar una llamada telefonica
+[Guia](https://www.geeksforgeeks.org/how-to-open-dialer-in-android-through-intent/) para realizar un intento de marcado numerico, con permisos de llamada.

@@ -1,7 +1,11 @@
 package com.luking.ventaraf
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import com.luking.ventaraf.databinding.ActivityDetalleAnuncioBinding
 import retrofit2.Call
@@ -17,6 +21,11 @@ class DetalleAnuncio : AppCompatActivity() {
         val bundle: Bundle? = intent.extras!!
 
         val idAnuncio = bundle?.getString("id_anuncio") ?: ""
+
+        // accion para el boton llamarahora
+        binding.botonLlamarAhora.setOnClickListener {
+            llamarAhora(binding.celular.text.toString())
+        }
 
         // llamada a nuestra api para recuperar un anuncio completo
         val apiInterface = ApiInterface.create().getAnuncio(idAnuncio.toInt())
@@ -35,5 +44,15 @@ class DetalleAnuncio : AppCompatActivity() {
             }
 
         })
+    }
+
+    fun llamarAhora(celular: String) {
+        // establece el formato como "tel:" seguido del numero de telefono
+        val uri = Uri.parse("tel:$celular")
+
+        // crea el intento y establece los datos para el numero de telefono
+        val intentoLlamarAhora: Intent = Intent(Intent.ACTION_DIAL, uri)
+
+        startActivity(intentoLlamarAhora)
     }
 }

@@ -3,11 +3,18 @@
 ## Clases grabadas
 | # de clase | Enlace | # de clase | Enlace |
 | ---------- | ------ | ---------- | ------ |
-| Clase 1 | https://youtu.be/7LvlhdG66zI | Clase 6 | https://youtu.be/A2dZuJSjYq4 |
-| Clase 2 | https://youtu.be/V-8_7Vxbil4 | Clase 7 | https://youtu.be/qWSvusqXTY8 |
-| Clase 3 | https://youtu.be/-QfXOjKQiBI | Clase 8 | https://youtu.be/PJmwsgZbCuM |
-| Clase 4 | https://youtu.be/4QjwnAFuQrI |
-| Clase 5 | https://youtu.be/CfXRE5R2Im0 |
+| Clase 1  | https://youtu.be/7LvlhdG66zI | Clase 11 | https://youtu.be/VacofUQ_VD0 |
+| Clase 2  | https://youtu.be/V-8_7Vxbil4 | Clase 12 | https://youtu.be/lACAhgfhtNk |
+| Clase 3  | https://youtu.be/-QfXOjKQiBI | Clase 13 | https://youtu.be/2SrxLVjQYQE |
+| Clase 4  | https://youtu.be/4QjwnAFuQrI |
+| Clase 5  | https://youtu.be/CfXRE5R2Im0 | 
+| Clase 6  | https://youtu.be/A2dZuJSjYq4 | 
+| Clase 7  | https://youtu.be/qWSvusqXTY8 |
+| Clase 8  | https://youtu.be/PJmwsgZbCuM |
+| Clase 9  | https://youtu.be/m-Zg7VheyI4 |
+| Clase 10 | https://youtu.be/Bqp-36ettrI |
+
+> Lista de reproduccion: https://youtube.com/playlist?list=PLLTLjTrlms4n1zxiSYZ30GmZFm_A5jsE2
 
 ## Instalacion
 
@@ -46,8 +53,14 @@ Crear una unidad virtual. Para ello, dirigirse al menu:
 Tools > AVD Manager > Create Virtual Device > Phone > Nexus 5X
 ```
 
+## Importar clases
+Posicionar el cursor sobre la clase que se necesita importar, y presionar la combinacion de teclas <kbd>Alt</kbd> + <kbd>Enter</kbd>.
+
 ## Encriptar contraseñas
-[Aqui](https://www.samclarke.com/kotlin-hash-strings/) hay una breve explicacion.
+[Aqui](https://www.samclarke.com/kotlin-hash-strings/) encontraremos el algoritmo que usaremos en nuestro IDE de programacion.
+
+## Generador de hash SHA-1
+Podemos encriptar una cadena de caracteres utilizando el algoritmo SHA-1 con ayuda de [esta](https://passwordsgenerator.net/sha1-hash-generator/) herramienta online.
 
 ## Gestionar permisos
 Agregar los permisos requeridos dentro de la estructura:
@@ -68,6 +81,12 @@ Toda las referencias al momento del desarrollo se puede encontrar en la [pagina 
 
 ## Android Asynchronous Http Client
 Herramienta para realizar [peticiones http asincronicas](https://loopj.com/android-async-http/) para consumir servicios web.
+
+## Otro cliente http mas potente
+[Retrofit](https://square.github.io/retrofit/) es otra herramienta, mucho mas potente que la anterior.
+
+## Serializador
+Para trabajar o serializar la respuesta del cliente http, usaremos [Gson](https://github.com/google/gson).
 
 ## Dependencias externas
 Para instalar herramientas de terceros como la mencionada arriba, primero se la debe importar:
@@ -123,3 +142,53 @@ Los servicios web por lo general devuelven respuestas en formato JSON. Se puede 
 
 ## Visor de Bases de Datos SQLite
 Se puede utilizar [esta](https://sqlitebrowser.org/dl/) herramienta para ver el contenido de Bases de Datos SQLite.
+
+## Generacion del archivo APK de la aplicacion
+Para generar el archivo final para distribuir la aplicacion, debemos dirigirnos al menu:
+
+```sh
+Build > Build Bundle(s) / APK(s) > Build APK
+```
+
+[Aqui](https://developer.android.com/guide/app-bundle?utm_source=android-studio), una explicacion de la diferencia entre APKs y Bundles.
+
+## Herramienta para crear APIs
+Podemos hacerlo a traves de [esta](https://www.mockapi.io/) pagina web.
+
+## Implementar RecyclerView
+Dirigirse a la seccion Gradle del modulo del proyecto
+
+```sh
+Gradle Scripts > build.gradle (Module) > dependencies
+```
+
+Agregar ```id 'kotlin-kapt'``` al objeto plugins:
+
+```kotlin
+plugins {
+    ...
+    id 'kotlin-kapt
+    ...
+}
+```
+
+Luego, debajo del objeto dependencies, escribir la siguiente linea:
+
+```kotlin
+buildFeatures {
+    dataBinding true
+}
+```
+
+Y finalmente, implementar la dependencia:
+
+
+```kotlin
+dependencies {
+    ...
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    ...
+}
+```
+
+

@@ -16,11 +16,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.listaAnuncios.layoutManager = LinearLayoutManager(this)
-        val listaAnuncios = mutableListOf<Anuncio>()
-        listaAnuncios.add(Anuncio(1, "imagen.jpg", "Titulo 1", 1000.25))
-        listaAnuncios.add(Anuncio(2, "imagen.jpg", "Titulo 2", 479.50))
-        listaAnuncios.add(Anuncio(3, "imagen.jpg", "Titulo 3", 10.99))
-        listaAnuncios.add(Anuncio(4, "imagen.jpg", "Titulo 4", 158.00))
+        val listaAnuncios = mutableListOf<AnuncioResumen>()
+        listaAnuncios.add(AnuncioResumen(1, "imagen.jpg", "Titulo 1", 1000.25))
+        listaAnuncios.add(AnuncioResumen(2, "imagen.jpg", "Titulo 2", 479.50))
+        listaAnuncios.add(AnuncioResumen(3, "imagen.jpg", "Titulo 3", 10.99))
+        listaAnuncios.add(AnuncioResumen(4, "imagen.jpg", "Titulo 4", 158.00))
 
         // creamos una instancia de anuncioadapter
         val adapter = AnuncioAdapter()
@@ -29,9 +29,9 @@ class MainActivity : AppCompatActivity() {
 
         val apiInterface = ApiInterface.create().getAnuncios()
 
-        apiInterface.enqueue(object: Callback<List<Anuncio>> {
+        apiInterface.enqueue(object: Callback<List<AnuncioResumen>> {
             // al recibir una respuesta
-            override fun onResponse(call: Call<List<Anuncio>>, response: Response<List<Anuncio>>) {
+            override fun onResponse(call: Call<List<AnuncioResumen>>, response: Response<List<AnuncioResumen>>) {
                 // compruebo que la respuesta tenga un cuerpo y sea distinto a nulo
                 if (response?.body() != null) {
                     // si el body tiene un valor, entonces lo envio al adaptador
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             // al haber un error a la llamada de la api
-            override fun onFailure(call: Call<List<Anuncio>>, t: Throwable) {
+            override fun onFailure(call: Call<List<AnuncioResumen>>, t: Throwable) {
 
             }
         })

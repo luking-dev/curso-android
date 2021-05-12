@@ -6,7 +6,7 @@
 | Clase 1  | https://youtu.be/7LvlhdG66zI | Clase 11 | https://youtu.be/VacofUQ_VD0 |
 | Clase 2  | https://youtu.be/V-8_7Vxbil4 | Clase 12 | https://youtu.be/lACAhgfhtNk |
 | Clase 3  | https://youtu.be/-QfXOjKQiBI | Clase 13 | https://youtu.be/2SrxLVjQYQE |
-| Clase 4  | https://youtu.be/4QjwnAFuQrI |
+| Clase 4  | https://youtu.be/4QjwnAFuQrI | Clase 14 | https://youtu.be/zh45JWV9w2A |
 | Clase 5  | https://youtu.be/CfXRE5R2Im0 | 
 | Clase 6  | https://youtu.be/A2dZuJSjYq4 | 
 | Clase 7  | https://youtu.be/qWSvusqXTY8 |

@@ -1,8 +1,10 @@
 package com.luking.ventaraf
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.luking.ventaraf.databinding.ActivityMainBinding
 import retrofit2.Call
@@ -45,11 +47,25 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        binding.botonBuscar.setOnClickListener {
+            if (binding.palabrasClave.text.isNotEmpty()) {
+                abrirResultadosBuscador(binding.palabrasClave.text.toString())
+            } else {
+                Toast.makeText(this, "Ingrese un termino de busqueda", Toast.LENGTH_LONG).show()
+            }
+        }
+
         // ejemplo sin recyclerview
         //val btnBuscar = findViewById<Button>(R.id.botonBuscar)
         //btnBuscar.text = "texto ejemplo"
 
         // ejemplo con recyclerview
         //binding.botonBuscar.text = "texto ejemplo"
+    }
+
+    fun abrirResultadosBuscador(palabrasClave: String) {
+        val intento: Intent = Intent(this@MainActivity, ResultadosBuscador::class.java)
+        intento.putExtra("palabras_clave", palabrasClave)
+        startActivity(intento)
     }
 }

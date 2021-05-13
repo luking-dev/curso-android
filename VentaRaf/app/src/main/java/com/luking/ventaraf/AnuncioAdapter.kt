@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class AnuncioAdapter:ListAdapter<AnuncioResumen,AnuncioAdapter.AnuncioViewHolder>(DiffCallback) {
 
@@ -40,6 +41,12 @@ class AnuncioAdapter:ListAdapter<AnuncioResumen,AnuncioAdapter.AnuncioViewHolder
             intentDetalle.putExtra("id_anuncio", anuncio.id.toString())
             holder.boton.context.startActivity(intentDetalle)
         }
+
+        // dibujo imagen en el view con picasso
+        Picasso
+            .get()
+            .load(anuncio.imagen) // imagen anuncio resumen
+            .into(holder.imagen) // imageview del layout
     }
 
     // clase interna

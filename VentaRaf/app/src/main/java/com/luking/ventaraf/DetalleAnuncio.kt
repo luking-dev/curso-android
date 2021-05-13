@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import com.luking.ventaraf.databinding.ActivityDetalleAnuncioBinding
+import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -24,7 +25,7 @@ class DetalleAnuncio : AppCompatActivity() {
 
         // accion para el boton llamarahora
         binding.botonLlamarAhora.setOnClickListener {
-            llamarAhora(binding.celular.text.toString())
+            llamarAhora(binding.celular!!.text.toString())
         }
 
         // llamada a nuestra api para recuperar un anuncio completo
@@ -37,6 +38,12 @@ class DetalleAnuncio : AppCompatActivity() {
                     // si el body tiene un valor, entonces lo envio al layout
                     response.body()!!.precio = "$" + response.body()!!.precio
                     binding.anuncio = response.body()
+
+                    // dibujo imagen en el view con picasso
+                    Picasso
+                        .get()
+                        .load(binding.anuncio!!.imagen) // imagen anuncio resumen
+                        .into(binding.imagenAnuncio) // imageview del layout
                 }
             }
 
@@ -46,13 +53,14 @@ class DetalleAnuncio : AppCompatActivity() {
         })
     }
 
-    fun llamarAhora(celular: String) {
+    // metodo para llamar a un numero de celular
+    fun llamarAhora(numeroCelular: String) {
         // establece el formato como "tel:" seguido del numero de telefono
-        val uri = Uri.parse("tel:$celular")
+        val uri = Uri.parse("tel:$numeroCelular")
 
         // crea el intento y establece los datos para el numero de telefono
-        val intentoLlamarAhora: Intent = Intent(Intent.ACTION_DIAL, uri)
+        val intento: Intent = Intent(Intent.ACTION_DIAL, uri)
 
-        startActivity(intentoLlamarAhora)
+        startActivity(intento)
     }
 }

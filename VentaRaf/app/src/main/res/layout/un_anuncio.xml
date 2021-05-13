@@ -11,9 +11,10 @@
         android:src="@drawable/ic_launcher_foreground"
         android:minWidth="75dp"
         android:minHeight="75dp"
+        android:maxHeight="75dp"
         android:layout_marginRight="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="110dp"
+        android:layout_height="110dp" />
 
     <LinearLayout
         android:layout_gravity="center"

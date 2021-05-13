@@ -24,6 +24,7 @@
             android:layout_height="wrap_content" />
 
         <ImageView
+            android:id="@+id/imagenAnuncio"
             android:layout_marginBottom="10dp"
             android:minHeight="175dp"
             android:layout_width="match_parent"

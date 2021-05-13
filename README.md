@@ -79,6 +79,9 @@ Servicio Web para ejemplos de API Rest: https://reqres.in/
 ## Documentacion de Android
 Toda las referencias al momento del desarrollo se puede encontrar en la [pagina oficial](https://developer.android.com/) de Android Studio.
 
+## Manejo de imagenes
+Lo hacemos a traves de [Picasso](https://square.github.io/picasso/)
+
 ## Android Asynchronous Http Client
 Herramienta para realizar [peticiones http asincronicas](https://loopj.com/android-async-http/) para consumir servicios web.
 

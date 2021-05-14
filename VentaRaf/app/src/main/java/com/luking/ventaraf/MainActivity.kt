@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.listaAnuncios.layoutManager = LinearLayoutManager(this)
-        val listaAnuncios = mutableListOf<AnuncioResumen>()
-        listaAnuncios.add(AnuncioResumen(1, "imagen.jpg", "Titulo 1", 1000.25))
-        listaAnuncios.add(AnuncioResumen(2, "imagen.jpg", "Titulo 2", 479.50))
-        listaAnuncios.add(AnuncioResumen(3, "imagen.jpg", "Titulo 3", 10.99))
-        listaAnuncios.add(AnuncioResumen(4, "imagen.jpg", "Titulo 4", 158.00))
+        //val listaAnuncios = mutableListOf<AnuncioResumen>()
+        //listaAnuncios.add(AnuncioResumen(1, "imagen.jpg", "Titulo 1", 1000.25))
+        //listaAnuncios.add(AnuncioResumen(2, "imagen.jpg", "Titulo 2", 479.50))
+        //listaAnuncios.add(AnuncioResumen(3, "imagen.jpg", "Titulo 3", 10.99))
+        //listaAnuncios.add(AnuncioResumen(4, "imagen.jpg", "Titulo 4", 158.00))
 
         // creamos una instancia de anuncioadapter
         val adapter = AnuncioAdapter()
@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        // accion para el boton buscar
         binding.botonBuscar.setOnClickListener {
             if (binding.palabrasClave.text.isNotEmpty()) {
                 abrirResultadosBuscador(binding.palabrasClave.text.toString())

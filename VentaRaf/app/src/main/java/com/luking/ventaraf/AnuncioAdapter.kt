@@ -39,6 +39,8 @@ class AnuncioAdapter:ListAdapter<AnuncioResumen,AnuncioAdapter.AnuncioViewHolder
         holder.boton.setOnClickListener {
             val intentDetalle: Intent = Intent(holder.boton.context, DetalleAnuncio::class.java)
             intentDetalle.putExtra("id_anuncio", anuncio.id.toString())
+            intentDetalle.putExtra("latitud", anuncio.latitud.toString())
+            intentDetalle.putExtra("longitud", anuncio.longitud.toString())
             holder.boton.context.startActivity(intentDetalle)
         }
 

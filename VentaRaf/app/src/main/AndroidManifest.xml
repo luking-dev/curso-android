@@ -14,7 +14,7 @@
         android:theme="@style/Theme.VentaRaf">
         <activity android:name=".ResultadosBuscador"></activity>
         <activity android:name=".DetalleAnuncio" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

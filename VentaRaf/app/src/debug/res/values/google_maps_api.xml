@@ -1,0 +1,3 @@
+<resources>
+    apiKey: String = BuildConfig.API_KEY
+</resources>

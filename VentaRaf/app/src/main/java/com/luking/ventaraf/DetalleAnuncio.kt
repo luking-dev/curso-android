@@ -22,10 +22,18 @@ class DetalleAnuncio : AppCompatActivity() {
         val bundle: Bundle? = intent.extras!!
 
         val idAnuncio = bundle?.getString("id_anuncio") ?: ""
+        val latitud = bundle?.getString("latitud") ?: ""
+        val longitud = bundle?.getString("longitud") ?: ""
 
         // accion para el boton llamarahora
         binding.botonLlamarAhora.setOnClickListener {
             llamarAhora(binding.celular!!.text.toString())
+        }
+
+        // accion para el boton llamarahora
+        binding.botonVerEnMapa.setOnClickListener {
+
+            buscarDomicilio(binding.direccion.text.toString(), latitud, longitud)
         }
 
         // llamada a nuestra api para recuperar un anuncio completo
@@ -60,6 +68,21 @@ class DetalleAnuncio : AppCompatActivity() {
 
         // crea el intento y establece los datos para el numero de telefono
         val intento: Intent = Intent(Intent.ACTION_DIAL, uri)
+
+        startActivity(intento)
+    }
+
+    // metodo para buscar un domicilio y mostrarlo en el mapa
+    fun buscarDomicilio(direccion: String, latitud: String, longitud: String) {
+        val intento: Intent = Intent(this@DetalleAnuncio, MapaDomicilio::class.java)
+
+        // paso algunos valores necesarios para google maps
+        intento.putExtra("direccion", direccion)
+        intento.putExtra("latitud", latitud)
+        intento.putExtra("longitud", longitud)
+
+        // mostrar notificacion con el domicilio
+        Toast.makeText(this, direccion, Toast.LENGTH_LONG).show()
 
         startActivity(intento)
     }

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">VentaRaf</string>
     <string name="title_activity_mapa_domicilio">Map</string>
+    <string name="apiKey">apiKey</string>
 </resources>

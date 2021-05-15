@@ -196,3 +196,15 @@ dependencies {
 
 ## Realizar una llamada telefonica
 [Guia](https://www.geeksforgeeks.org/how-to-open-dialer-in-android-through-intent/) para realizar un intento de marcado numerico, con permisos de llamada.
+
+## Integrar Google Maps
+Se debe comenzar creando un nuevo Recurso de Google Maps desde el menu:
+
+```sh
+File > New > Activity > Gallery... > Google Maps Activity
+```
+
+[Este video](https://www.youtube.com/watch?v=TN97RRR-7bk&ab_channel=BintuHarwani), mas [esta guia] de la pagina de desarrolladores de Google son bastante utiles para lograr implementar el uso de Google Maps en tu proyecto.
+
+## Ocultar y resguardar una API-Key de terceros.
+Para subir el repositorio, y que las credenciales esten ocultas y resguardadas de terceros, hay que seguir unos simples pasos que propone esta breve [guia](https://itnext.io/hide-and-keep-your-api-key-out-of-github-repository-7e89cc4b159d).

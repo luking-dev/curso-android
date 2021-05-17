@@ -208,3 +208,6 @@ File > New > Activity > Gallery... > Google Maps Activity
 
 ## Ocultar y resguardar una API-Key de terceros.
 Para subir el repositorio, y que las credenciales esten ocultas y resguardadas de terceros, hay que seguir unos simples pasos que propone esta breve [guia](https://itnext.io/hide-and-keep-your-api-key-out-of-github-repository-7e89cc4b159d).
+
+## Probar consultas para APIs
+[Postman](https://www.postman.com/downloads/) es una de las mas usadas.

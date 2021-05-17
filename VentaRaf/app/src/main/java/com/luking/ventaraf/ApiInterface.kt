@@ -3,9 +3,7 @@ package com.luking.ventaraf
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface ApiInterface {
     // obtiene lista de anuncios desde mi api
@@ -19,6 +17,9 @@ interface ApiInterface {
     // obtiene lista de anuncios filtrada por termino de busqueda
     @GET("anuncios")
     fun getResultados(@Query("titulo") palabrasClave: String): Call<List<AnuncioResumen>>
+
+    @POST("anuncios")
+    fun nuevoAnuncio(@Body anuncio: Anuncio): Call<Anuncio>
 
     companion object {
         // llamar a la api de mockapi

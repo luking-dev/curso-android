@@ -211,3 +211,6 @@ Para subir el repositorio, y que las credenciales esten ocultas y resguardadas d
 
 ## Probar consultas para APIs
 [Postman](https://www.postman.com/downloads/) es una de las mas usadas.
+
+## Subir mi aplicacion a Google Play
+Se debe tener una cuenta de [Google Play Console](https://support.google.com/googleplay/android-developer/answer/6112435?hl=es-419).

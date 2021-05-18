@@ -56,12 +56,21 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        binding.botonVender.setOnClickListener {
+            abrirVender()
+        }
+
         // ejemplo sin recyclerview
         //val btnBuscar = findViewById<Button>(R.id.botonBuscar)
         //btnBuscar.text = "texto ejemplo"
 
         // ejemplo con recyclerview
         //binding.botonBuscar.text = "texto ejemplo"
+    }
+
+    private fun abrirVender() {
+        val intento: Intent = Intent(this@MainActivity, VenderActivity::class.java)
+        startActivity(intento)
     }
 
     fun abrirResultadosBuscador(palabrasClave: String) {

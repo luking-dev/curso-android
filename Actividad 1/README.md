@@ -32,7 +32,7 @@ Continuar trabajando en el proyecto _**MiPrimerAPK**_.
 5. Pasar capturas de pantallas de:
     - _**Cuenta Activity**_ (codigo).
     - _**Cuenta Layout**_ (codigo).
-    - Cuenta pantalla en el emulador.
+    - _**Cuenta Pantalla**_ en el emulador.
 6. Generar APK debug, subir a la nube (ejemplo: Google Drive), y pasar link para descargar.
 
 > **IMPORTANTE**

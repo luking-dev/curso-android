@@ -32,8 +32,8 @@ Continuar trabajando en el proyecto "MiPrimerAPK"
 5. Pasar capturas de pantallas de:
     - _**Cuenta Activity**_ (codigo).
     - _**Cuenta Layout**_ (codigo).
-    - Cuenta pantalla en el Emulador.
-6- Generar APK debug, subir a la nube (ej. Google Drive), y pasar link, para descargar.
+    - Cuenta pantalla en el emulador.
+6. Generar APK debug, subir a la nube (ejemplo: Google Drive), y pasar link para descargar.
 
 > **IMPORTANTE**
 + Tienen tiempo para entregar hasta el Lunes 31 de Mayo, inclusive.

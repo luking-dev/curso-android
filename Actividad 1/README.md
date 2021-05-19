@@ -26,7 +26,7 @@
 ## Actividad Practica #2
 Continuar trabajando en el proyecto "MiPrimerAPK".
 1. Crear una actividad _**Cuenta**_ _**(Empty Activity)**_.
-2. En RegistroActivity, el boton _**Registrarme**_ debera llevar a la activity _**Cuenta**_ y pasar los datos cargados en _**Registro**_ (nombre, apellido, email, clave).
+2. En _**RegistroActivity**_, el boton _**Registrarme**_ debera llevar a la activity _**Cuenta**_ y pasar los datos cargados en _**Registro**_ (nombre, apellido, email, clave).
 3. En _**Cuenta**_, crear los views correspondientes, para mostrar la informacion (nombre, apellido, email, clave).
 4. En _**MainActivity**_ el boton _**Ingresar**_, debera llevarme a _**Cuenta**_, mostrarme datos ingresados (email, clave) y datos ficticios (nombre, apellido).
 5. Pasar capturas de pantallas de:

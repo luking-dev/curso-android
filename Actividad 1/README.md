@@ -36,5 +36,5 @@ Continuar trabajando en el proyecto "MiPrimerAPK"
 6. Generar APK debug, subir a la nube (ejemplo: Google Drive), y pasar link para descargar.
 
 > **IMPORTANTE**
-+ Tienen tiempo para entregar hasta el Lunes 31 de Mayo, inclusive.
-+ Las capturas de pantallas y links, me las envian por Whatsapp, a este número.
+> + Tienen tiempo para entregar hasta el Lunes 31 de Mayo, inclusive.
+> + Las capturas de pantallas y links, me las envian por Whatsapp, a este número.

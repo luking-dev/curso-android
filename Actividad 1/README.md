@@ -23,8 +23,8 @@
     - Cada pantalla en el emulador.
 
 
-## Actividad Practica #1
-Continuar trabajando en el proyecto "MiPrimerAPK"
+## Actividad Practica #2
+Continuar trabajando en el proyecto "MiPrimerAPK".
 1. Crear una actividad _**Cuenta**_ _**(Empty Activity)**_.
 2. En RegistroActivity, el boton _**Registrarme**_ debera llevar a la activity _**Cuenta**_ y pasar los datos cargados en _**Registro**_ (nombre, apellido, email, clave).
 3. En _**Cuenta**_, crear los views correspondientes, para mostrar la informacion (nombre, apellido, email, clave).

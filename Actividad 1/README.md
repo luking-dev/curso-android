@@ -1,5 +1,3 @@
-# Android (2021)
-
 ## Actividad Practica #1
 1. Crear un nuevo proyecto en Android Studio _**MiPrimerAPK**_, con una _**Empty Activity**_.
 2. Crear una actividad _**Registro**_ _**(Empty Activity)**_.

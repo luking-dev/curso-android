@@ -30,25 +30,34 @@ class Registro : AppCompatActivity() {
         btnRegistrarme.setOnClickListener() {
             // compruebo que todos los campos esten completos
             if (nombre.text.isNotEmpty() && apellido.text.isNotEmpty() && email.text.isNotEmpty() && clave.text.isNotEmpty()) {
-                // compruebo que se haya completado el campo clave
-                if (clave.text.isNotEmpty()) {
-                    // encripto la clave
-                    val claveHash = HashUtils.sha1(clave.text.toString())
+                // encripto la clave
+                val claveHash = HashUtils.sha1(clave.text.toString())
 
-                    // aviso al usuario que el registro se completo exitosamente
-                    Toast.makeText(this, "Registro exitoso!", Toast.LENGTH_LONG).show()
+                // aviso al usuario que el registro se completo exitosamente
+                Toast.makeText(this, "Registro exitoso!", Toast.LENGTH_LONG).show()
 
-                    // inicio la actividad MisDatos
-                    abrirActividadMainActivity("Logueese con sus datos")
-                } else {
-                    // aviso al usuario que se ingresaron claves distintas
-                    Toast.makeText(this, "Verifique sus datos. Las claves no coinciden", Toast.LENGTH_LONG).show()
-                }
+                // intento abrir la activity cuenta
+                abrirCuenta(nombre.text.toString(), apellido.text.toString(),
+                    email.text.toString(), HashUtils.sha1(clave.text.toString()))
             } else {
                 // aviso al usuario que hay campos incompletos
                 Toast.makeText(this, "Todos los campos son requeridos", Toast.LENGTH_LONG).show()
             }
         }
+    }
+
+    fun abrirCuenta(nombre: String, apellido: String, email: String, claveEncriptada: String) {
+        // defino el intento
+        val intento: Intent = Intent(this@Registro, Cuenta::class.java)
+
+        // defino valores extra del intento para pasar como parametros a la actividad cuenta
+        intento.putExtra("nombre", nombre)
+        intento.putExtra("apellido", apellido)
+        intento.putExtra("email", email)
+        intento.putExtra("clave_encriptada", claveEncriptada)
+
+        // inicio la actividad
+        startActivity(intento)
     }
 
     fun abrirActividadMainActivity(notificacion: String) {

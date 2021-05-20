@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
                 // aviso al usuario que hay campos incompletos
                 Toast.makeText(this, "Complete todos los datos para loguearse", Toast.LENGTH_LONG).show()
             } else {
-                // inicio la actividad misdatos
-                abrirActividadMisDatos(vEmail.text.toString(), claveEncriptada)
+                // inicio la actividad cuenta
+                abrirActividadCuenta(vEmail.text.toString(), claveEncriptada)
             }
         }
 
@@ -40,6 +40,20 @@ class MainActivity : AppCompatActivity() {
             // inicio la actividad registro
             abrirActividadRegistro()
         }
+    }
+
+    fun abrirActividadCuenta(email: String, claveEncriptada: String) {
+        // defino intento
+        val intento: Intent = Intent(this@MainActivity, Cuenta::class.java)
+
+        // defino valores extra del intento para pasar como parametros a la actividad misdatos
+        intento.putExtra("nombre", "Lucas")
+        intento.putExtra("apellido", "Zurverra")
+        intento.putExtra("email", email)
+        intento.putExtra("clave_encriptada", claveEncriptada)
+
+        // inicio la actividad
+        startActivity(intento)
     }
 
     fun abrirActividadMisDatos(email: String, claveEncriptada: String) {

@@ -10,7 +10,7 @@
 | Clase 5  | https://youtu.be/CfXRE5R2Im0 | Clase 14 | https://youtu.be/zh45JWV9w2A |
 | Clase 6  | https://youtu.be/A2dZuJSjYq4 | Clase 15 | https://youtu.be/1Q4TI9J1hxc |
 | Clase 7  | https://youtu.be/qWSvusqXTY8 | Clase 16 | https://youtu.be/odCNdVHj7Ig |
-| Clase 8  | https://youtu.be/PJmwsgZbCuM | 
+| Clase 8  | https://youtu.be/PJmwsgZbCuM | Clase 17 | https://youtu.be/8x1H0vVYdm8 |
 | Clase 9  | https://youtu.be/m-Zg7VheyI4 |
 
 > Lista de reproduccion: https://youtube.com/playlist?list=PLLTLjTrlms4n1zxiSYZ30GmZFm_A5jsE2

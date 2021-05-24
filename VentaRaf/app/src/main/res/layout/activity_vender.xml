@@ -42,6 +42,20 @@
             android:layout_height="wrap_content" />
 
         <EditText
+            android:id="@+id/email"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/celular"
+            android:hint="Celular"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
             android:id="@+id/titulo"
             android:hint="Titulo"
             android:layout_width="match_parent"

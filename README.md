@@ -3,16 +3,15 @@
 ## Clases grabadas
 | # de clase | Enlace | # de clase | Enlace |
 | ---------- | ------ | ---------- | ------ |
-| Clase 1  | https://youtu.be/7LvlhdG66zI | Clase 11 | https://youtu.be/VacofUQ_VD0 |
-| Clase 2  | https://youtu.be/V-8_7Vxbil4 | Clase 12 | https://youtu.be/lACAhgfhtNk |
-| Clase 3  | https://youtu.be/-QfXOjKQiBI | Clase 13 | https://youtu.be/2SrxLVjQYQE |
-| Clase 4  | https://youtu.be/4QjwnAFuQrI |
-| Clase 5  | https://youtu.be/CfXRE5R2Im0 | 
-| Clase 6  | https://youtu.be/A2dZuJSjYq4 | 
-| Clase 7  | https://youtu.be/qWSvusqXTY8 |
-| Clase 8  | https://youtu.be/PJmwsgZbCuM |
+| Clase 1  | https://youtu.be/7LvlhdG66zI | Clase 10 | https://youtu.be/Bqp-36ettrI |
+| Clase 2  | https://youtu.be/V-8_7Vxbil4 | Clase 11 | https://youtu.be/VacofUQ_VD0 |
+| Clase 3  | https://youtu.be/-QfXOjKQiBI | Clase 12 | https://youtu.be/lACAhgfhtNk |
+| Clase 4  | https://youtu.be/4QjwnAFuQrI | Clase 13 | https://youtu.be/2SrxLVjQYQE |
+| Clase 5  | https://youtu.be/CfXRE5R2Im0 | Clase 14 | https://youtu.be/zh45JWV9w2A |
+| Clase 6  | https://youtu.be/A2dZuJSjYq4 | Clase 15 | https://youtu.be/1Q4TI9J1hxc |
+| Clase 7  | https://youtu.be/qWSvusqXTY8 | Clase 16 | https://youtu.be/odCNdVHj7Ig |
+| Clase 8  | https://youtu.be/PJmwsgZbCuM | 
 | Clase 9  | https://youtu.be/m-Zg7VheyI4 |
-| Clase 10 | https://youtu.be/Bqp-36ettrI |
 
 > Lista de reproduccion: https://youtube.com/playlist?list=PLLTLjTrlms4n1zxiSYZ30GmZFm_A5jsE2
 
@@ -78,6 +77,9 @@ Servicio Web para ejemplos de API Rest: https://reqres.in/
 
 ## Documentacion de Android
 Toda las referencias al momento del desarrollo se puede encontrar en la [pagina oficial](https://developer.android.com/) de Android Studio.
+
+## Manejo de imagenes
+Lo hacemos a traves de [Picasso](https://square.github.io/picasso/)
 
 ## Android Asynchronous Http Client
 Herramienta para realizar [peticiones http asincronicas](https://loopj.com/android-async-http/) para consumir servicios web.
@@ -191,4 +193,23 @@ dependencies {
 }
 ```
 
+## Realizar una llamada telefonica
+[Guia](https://www.geeksforgeeks.org/how-to-open-dialer-in-android-through-intent/) para realizar un intento de marcado numerico, con permisos de llamada.
 
+## Integrar Google Maps
+Se debe comenzar creando un nuevo Recurso de Google Maps desde el menu:
+
+```sh
+File > New > Activity > Gallery... > Google Maps Activity
+```
+
+[Este](https://www.youtube.com/watch?v=TN97RRR-7bk&ab_channel=BintuHarwani) video, sumado a [esta](https://developers.google.com/maps/documentation/android-sdk/map-with-marker?hl=es-419) guia de la pagina de desarrolladores de Google son bastante utiles para lograr implementar el uso de Google Maps en tu proyecto y colocar un marcador.
+
+## Ocultar y resguardar una API-Key de terceros.
+Para subir el repositorio, y que las credenciales esten ocultas y resguardadas de terceros, hay que seguir unos simples pasos que propone esta breve [guia](https://itnext.io/hide-and-keep-your-api-key-out-of-github-repository-7e89cc4b159d).
+
+## Probar consultas para APIs
+[Postman](https://www.postman.com/downloads/) es una de las mas usadas.
+
+## Subir mi aplicacion a Google Play
+Se debe tener una cuenta de [Google Play Console](https://support.google.com/googleplay/android-developer/answer/6112435?hl=es-419).

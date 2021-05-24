@@ -18,7 +18,7 @@ interface ApiInterface {
     @GET("anuncios")
     fun getResultados(@Query("titulo") palabrasClave: String): Call<List<AnuncioResumen>>
 
-    @POST("anuncios")
+    @POST("anuncios/")
     fun nuevoAnuncio(@Body anuncio: Anuncio): Call<Anuncio>
 
     companion object {

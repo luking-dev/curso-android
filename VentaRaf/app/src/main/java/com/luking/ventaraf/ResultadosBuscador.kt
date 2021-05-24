@@ -1,5 +1,6 @@
 package com.luking.ventaraf
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +13,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class ResultadosBuscador : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityResultadosBuscadorBinding.inflate(layoutInflater)
@@ -33,26 +35,20 @@ class ResultadosBuscador : AppCompatActivity() {
 
         val apiInterface = ApiInterface.create().getResultados(palabrasClave)
 
-        apiInterface.enqueue(object: Callback<List<AnuncioResumen>> {
+        apiInterface.enqueue(object: Callback<List<Anuncio>> {
             // al recibir una respuesta
-            override fun onResponse(call: Call<List<AnuncioResumen>>, response: Response<List<AnuncioResumen>>) {
+            override fun onResponse(call: Call<List<Anuncio>>, response: Response<List<Anuncio>>) {
                 // compruebo que la respuesta tenga un cuerpo y sea distinto a nulo
-                if (response?.body() != null) {
+                if (response.body() != null) {
                     // si el body tiene un valor, entonces lo envio al adaptador
                     adapter.submitList(response.body())
                 }
             }
 
             // al haber un error a la llamada de la api
-            override fun onFailure(call: Call<List<AnuncioResumen>>, t: Throwable) {
+            override fun onFailure(call: Call<List<Anuncio>>, t: Throwable) {
 
             }
         })
-    }
-
-    fun abrirResultadosBuscador(palabrasClave: String) {
-        val intento: Intent = Intent(this@ResultadosBuscador, ResultadosBuscador::class.java)
-        intento.putExtra("palabras_clave", palabrasClave)
-        startActivity(intento)
     }
 }

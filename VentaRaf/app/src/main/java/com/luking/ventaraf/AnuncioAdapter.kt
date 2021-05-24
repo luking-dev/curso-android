@@ -1,5 +1,6 @@
 package com.luking.ventaraf
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -12,14 +13,14 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-class AnuncioAdapter:ListAdapter<AnuncioResumen,AnuncioAdapter.AnuncioViewHolder>(DiffCallback) {
+class AnuncioAdapter:ListAdapter<Anuncio,AnuncioAdapter.AnuncioViewHolder>(DiffCallback) {
 
-    companion object DiffCallback : DiffUtil.ItemCallback<AnuncioResumen>(){
-        override fun areItemsTheSame(oldItem: AnuncioResumen, newItem: AnuncioResumen): Boolean {
+    companion object DiffCallback : DiffUtil.ItemCallback<Anuncio>(){
+        override fun areItemsTheSame(oldItem: Anuncio, newItem: Anuncio): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: AnuncioResumen, newItem: AnuncioResumen): Boolean {
+        override fun areContentsTheSame(oldItem: Anuncio, newItem: Anuncio): Boolean {
             return  oldItem == newItem
         }
     }
@@ -29,18 +30,23 @@ class AnuncioAdapter:ListAdapter<AnuncioResumen,AnuncioAdapter.AnuncioViewHolder
         return AnuncioViewHolder(view)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: AnuncioAdapter.AnuncioViewHolder, position: Int) {
         // obtenemos la posicion del anuncio
-        val anuncio: AnuncioResumen = getItem(position)
+        val anuncio: Anuncio = getItem(position)
 
         // reemplazamos los valores
         holder.titulo.text = anuncio.titulo
-        holder.precio.text = "$ " + anuncio.precio.toString()
+        val precio = anuncio.precio
+        holder.precio.text = "$$precio"
         holder.boton.setOnClickListener {
-            val intentDetalle: Intent = Intent(holder.boton.context, DetalleAnuncio::class.java)
+            val intentDetalle = Intent(holder.boton.context, DetalleAnuncio::class.java)
             intentDetalle.putExtra("id_anuncio", anuncio.id.toString())
             intentDetalle.putExtra("latitud", anuncio.latitud.toString())
             intentDetalle.putExtra("longitud", anuncio.longitud.toString())
+            intentDetalle.putExtra("email", anuncio.email.toString())
+            intentDetalle.putExtra("celular", anuncio.celular.toString())
+            
             holder.boton.context.startActivity(intentDetalle)
         }
 
@@ -52,7 +58,7 @@ class AnuncioAdapter:ListAdapter<AnuncioResumen,AnuncioAdapter.AnuncioViewHolder
     }
 
     // clase interna
-    inner class AnuncioViewHolder(val view:View): RecyclerView.ViewHolder(view){
+    inner class AnuncioViewHolder(view:View): RecyclerView.ViewHolder(view){
         val imagen = view.findViewById<ImageView>(R.id.anuncioImagen)
         val titulo = view.findViewById<TextView>(R.id.anuncioTitulo)
         val precio = view.findViewById<TextView>(R.id.anuncioPrecio)

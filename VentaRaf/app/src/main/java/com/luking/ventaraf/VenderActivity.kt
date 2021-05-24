@@ -20,16 +20,16 @@ class VenderActivity : AppCompatActivity() {
     }
 
     private fun publicarAnuncio(binding: ActivityVenderBinding) {
-        val anuncio: Anuncio = Anuncio(null,
-                                        binding.imagen.text.toString(),
-                                        binding.titulo.text.toString(),
-                                        binding.descripcion.text.toString(),
-                                        null,
-                                        binding.nombre.text.toString(),
-                                        binding.direccion.text.toString(),
-                                        null,
-                                        null,
-                                        binding.precio.text.toString())
+        val anuncio = Anuncio(  null,
+                                binding.imagen.text.toString(),
+                                binding.titulo.text.toString(),
+                                binding.descripcion.text.toString(),
+                                null,
+                                binding.nombre.text.toString(),
+                                binding.direccion.text.toString(),
+                                null,
+                                null,
+                                binding.precio.text.toString())
 
         val apiInterface = ApiInterface.create().nuevoAnuncio(anuncio)
 

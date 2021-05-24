@@ -27,7 +27,7 @@ interface ApiInterface {
         // endpoint (red)
         val BASE_URL = "http://192.168.1.111:8000/api/"
         // endpoint
-        //val BASE_URL = "http://192.168.1.111:8000/api/"
+        //val BASE_URL = "http://stablerpi.duckdns.org:8000/api/"
 
         fun create(): ApiInterface {
             // implementamos el cliente http

@@ -35,8 +35,8 @@ class VenderActivity : AppCompatActivity() {
                                 null,
                                 null,
                                 binding.direccion.text.toString(),
-                                null,
-                                null,
+                                binding.email.text.toString(),
+                                binding.celular.text.toString(),
                                 binding.precio.text.toString())
 
         val apiInterface = ApiInterface.create().nuevoAnuncio(anuncio)

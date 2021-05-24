@@ -3,11 +3,13 @@ package com.luking.ventaraf
 
 data class Anuncio(
     val id: Int?,
-    val imagen: String,
+    val imagen: String?,
     val titulo: String,
     val descripcion: String,
     val fecha: String?,
     val nombre: String,
+    val latitud: String?,
+    val longitud: String?,
     val direccion: String,
     val email: String?,
     val celular: String?,

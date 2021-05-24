@@ -1,5 +1,6 @@
 package com.luking.ventaraf
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -19,17 +20,24 @@ class VenderActivity : AppCompatActivity() {
         }
     }
 
+    private fun abrirMainActivity() {
+        val intento = Intent(this@VenderActivity, MainActivity::class.java)
+        startActivity(intento)
+    }
+
     private fun publicarAnuncio(binding: ActivityVenderBinding) {
-        val anuncio: Anuncio = Anuncio(null,
-                                        binding.imagen.text.toString(),
-                                        binding.titulo.text.toString(),
-                                        binding.descripcion.text.toString(),
-                                        null,
-                                        binding.nombre.text.toString(),
-                                        binding.direccion.text.toString(),
-                                        null,
-                                        null,
-                                        binding.precio.text.toString())
+        val anuncio = Anuncio(  null,
+                                binding.imagen.text.toString(),
+                                binding.titulo.text.toString(),
+                                binding.descripcion.text.toString(),
+                                null,
+                                binding.nombre.text.toString(),
+                                null,
+                                null,
+                                binding.direccion.text.toString(),
+                                null,
+                                null,
+                                binding.precio.text.toString())
 
         val apiInterface = ApiInterface.create().nuevoAnuncio(anuncio)
 
@@ -37,10 +45,11 @@ class VenderActivity : AppCompatActivity() {
             // al recibir una respuesta
             override fun onResponse(call: Call<Anuncio>, response: Response<Anuncio>) {
                 // compruebo que la respuesta tenga un cuerpo y sea distinto a nulo
-                if (response?.body() != null) {
+                if (response.body() != null) {
                     // informo al usuario que se creo el anuncio correctamente
                     Toast.makeText(this@VenderActivity, "Anuncio publicado con exito", Toast.LENGTH_LONG).show()
                 }
+                abrirMainActivity()
             }
 
             // al haber un error a la llamada de la api

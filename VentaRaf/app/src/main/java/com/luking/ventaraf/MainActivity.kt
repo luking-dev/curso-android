@@ -31,18 +31,18 @@ class MainActivity : AppCompatActivity() {
 
         val apiInterface = ApiInterface.create().getAnuncios()
 
-        apiInterface.enqueue(object: Callback<List<AnuncioResumen>> {
+        apiInterface.enqueue(object: Callback<List<Anuncio>> {
             // al recibir una respuesta
-            override fun onResponse(call: Call<List<AnuncioResumen>>, response: Response<List<AnuncioResumen>>) {
+            override fun onResponse(call: Call<List<Anuncio>>, response: Response<List<Anuncio>>) {
                 // compruebo que la respuesta tenga un cuerpo y sea distinto a nulo
-                if (response?.body() != null) {
+                if (response.body() != null) {
                     // si el body tiene un valor, entonces lo envio al adaptador
                     adapter.submitList(response.body())
                 }
             }
 
             // al haber un error a la llamada de la api
-            override fun onFailure(call: Call<List<AnuncioResumen>>, t: Throwable) {
+            override fun onFailure(call: Call<List<Anuncio>>, t: Throwable) {
 
             }
         })
@@ -69,12 +69,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun abrirVender() {
-        val intento: Intent = Intent(this@MainActivity, VenderActivity::class.java)
+        val intento = Intent(this@MainActivity, VenderActivity::class.java)
         startActivity(intento)
     }
 
     fun abrirResultadosBuscador(palabrasClave: String) {
-        val intento: Intent = Intent(this@MainActivity, ResultadosBuscador::class.java)
+        val intento = Intent(this@MainActivity, ResultadosBuscador::class.java)
         intento.putExtra("palabras_clave", palabrasClave)
         startActivity(intento)
     }

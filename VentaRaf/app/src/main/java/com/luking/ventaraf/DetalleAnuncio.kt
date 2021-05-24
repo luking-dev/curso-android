@@ -1,5 +1,6 @@
 package com.luking.ventaraf
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class DetalleAnuncio : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityDetalleAnuncioBinding.inflate(layoutInflater)
@@ -27,12 +29,15 @@ class DetalleAnuncio : AppCompatActivity() {
 
         // accion para el boton llamarahora
         binding.botonLlamarAhora.setOnClickListener {
-            llamarAhora(binding.celular!!.text.toString())
+            if (binding.celular.text.toString().isNotEmpty()) {
+                llamarAhora(binding.celular.text.toString())
+            } else {
+                binding.celular.text = "No se ha registrado numero"
+            }
         }
 
         // accion para el boton llamarahora
         binding.botonVerEnMapa.setOnClickListener {
-
             buscarDomicilio(binding.direccion.text.toString(), latitud, longitud)
         }
 
@@ -67,14 +72,14 @@ class DetalleAnuncio : AppCompatActivity() {
         val uri = Uri.parse("tel:$numeroCelular")
 
         // crea el intento y establece los datos para el numero de telefono
-        val intento: Intent = Intent(Intent.ACTION_DIAL, uri)
+        val intento = Intent(Intent.ACTION_DIAL, uri)
 
         startActivity(intento)
     }
 
     // metodo para buscar un domicilio y mostrarlo en el mapa
     fun buscarDomicilio(direccion: String, latitud: String, longitud: String) {
-        val intento: Intent = Intent(this@DetalleAnuncio, MapaDomicilio::class.java)
+        val intento = Intent(this@DetalleAnuncio, MapaDomicilio::class.java)
 
         // paso algunos valores necesarios para google maps
         intento.putExtra("direccion", direccion)

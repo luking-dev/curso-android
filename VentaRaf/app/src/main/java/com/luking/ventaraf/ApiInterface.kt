@@ -8,7 +8,7 @@ import retrofit2.http.*
 interface ApiInterface {
     // obtiene lista de anuncios desde mi api
     @GET("anuncios")
-    fun getAnuncios(): Call<List<AnuncioResumen>>
+    fun getAnuncios(): Call<List<Anuncio>>
 
     // obtiene un anuncio completo
     @GET("anuncios/{id}")
@@ -16,14 +16,18 @@ interface ApiInterface {
 
     // obtiene lista de anuncios filtrada por termino de busqueda
     @GET("anuncios")
-    fun getResultados(@Query("titulo") palabrasClave: String): Call<List<AnuncioResumen>>
+    fun getResultados(@Query("titulo") palabrasClave: String): Call<List<Anuncio>>
 
-    @POST("anuncios")
+    @POST("anuncios/")
     fun nuevoAnuncio(@Body anuncio: Anuncio): Call<Anuncio>
 
     companion object {
         // llamar a la api de mockapi
-        val BASE_URL = "https://608b3fb0737e470017b749bd.mockapi.io/"
+        //val BASE_URL = "https://608b3fb0737e470017b749bd.mockapi.io/"
+        // endpoint (red)
+        val BASE_URL = "http://192.168.1.111:8000/api/"
+        // endpoint
+        //val BASE_URL = "http://192.168.1.111:8000/api/"
 
         fun create(): ApiInterface {
             // implementamos el cliente http
